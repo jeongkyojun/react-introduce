@@ -8,3 +8,5 @@ export const Label = ({htmlFor,children,...rest})=>{
         </StyledLabel>
     );
 }
+
+export default Label;

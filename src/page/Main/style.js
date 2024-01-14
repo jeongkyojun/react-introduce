@@ -14,13 +14,13 @@ export const StyledImageWrapper = styled.div`
 
 export const StyledTextWrapper = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     width: 100vw;
 `
 export const StyledTextParent = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     color: white;
     opacity: ${({isAnimation})=>isAnimation?1:0};
     transition: ${({animationTime})=>animationTime||5000}ms;

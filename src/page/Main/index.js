@@ -3,16 +3,16 @@ import { StyledImageWrapper, StyledMain, StyledTextChild, StyledTextParent, Styl
 import Image from "../../atom/Image";
 import Label from "../../atom/Label";
 import DiagramBoard from "../../organ/DiagramBoard";
+import DiagramLine from "../../molecule/DiagramLine";
+import DiagramClass from "../../organ/DiagramClass";
 
 const Main = ()=>{
     const [showImageMenu, setShowImageMenu] = useState(false);
-    const [showTextMenu, setShowTextMenu] = useState(false);
+    
     useEffect(()=>{
         setShowImageMenu(true);
     })
-    useEffect(()=>{
-        setTimeout(()=>{setShowTextMenu(true)},2000);
-    },showImageMenu);
+    
 
     return(
         <StyledMain>
@@ -20,14 +20,10 @@ const Main = ()=>{
                 <Image src={'/images/myPics.jpg'} alt={'myPics'} width={'10rem'} height={'10rem'} isCircle={true}></Image>
             </StyledImageWrapper>
             <StyledTextWrapper>
-                <StyledTextParent isAnimation={showTextMenu} animationTime={2000}>
-                    <DiagramBoard>
-
-                    </DiagramBoard>
-                </StyledTextParent>
+                <DiagramClass num={3}></DiagramClass>
                 <StyledTextChild></StyledTextChild>
                 <StyledTextParent>
-                    <Label></Label>
+                    <Label>test</Label>
                 </StyledTextParent>
             </StyledTextWrapper>
         </StyledMain>

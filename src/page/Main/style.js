@@ -15,6 +15,7 @@ export const StyledImageWrapper = styled.div`
 export const StyledTextWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100vw;
 `
 export const StyledTextParent = styled.div`

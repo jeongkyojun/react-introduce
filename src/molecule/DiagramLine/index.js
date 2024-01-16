@@ -1,23 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { StyledDiagramLine, StyledLeftWrapper, StyledLinearChild, StyledLinearHead, StyledLinearParent, StyledLinearWrapper, StyledParentHeader, StyledRightWrapper } from "./style";
 
-const DiagramLine = ({childNum})=>{
-    const [headAnimation,setHeadAnimation] = useState(false);
-    const [parentAnimation, setParentAnimation] = useState(false);
-    const [childAnimation, setChildAnimation] = useState(false);
-
-    const DEFAULT_TIME = 5000;
+const DiagramLine = ({childNum, width, isTop, selectNum})=>{
 
     const makeBoard = ()=>{
         const val = [];
         for(let i=0;i<childNum+1;i++){
-            val.push(<StyledLinearWrapper childNum={childNum}></StyledLinearWrapper>)
+            val.push(<StyledLinearWrapper isSelected={i===selectNum} isTop={isTop} isFirst={i===0} isEnd={i===(childNum)} childNum={childNum}></StyledLinearWrapper>)
         }
         return val;
     }
     return(
-        <StyledDiagramLine>
-            <StyledLinearChild transitionTime={DEFAULT_TIME} setAnimation={true}>
+        <StyledDiagramLine width={width}>
+            <StyledLinearChild transitionTime={1000} setAnimation={true}>
                 {
                     makeBoard()
                 }

@@ -4,11 +4,11 @@ import Label from "../../atom/Label";
 import DiagramValue from "../../molecule/DiagramValue";
 import DiagramMethod from "../../molecule/DiagramMethod";
 
-const DiagramBoard = ({elements,width,mouseOverHandler})=>{
+const DiagramBoard = ({elements,width,mouseOverHandler,disabled,...rest})=>{
     const DEFAULT_VALUE = ['a','b','c'];
     const DEFAULT_METHOD = ['birth','phone','email'];
     return(
-        <StyledDiagramBoard onMouseOver={mouseOverHandler}>
+        <StyledDiagramBoard disabled={disabled} onMouseOver={mouseOverHandler} width={width+'rem'} {...rest}>
             <DiagramHeaderWrapper>
                 <Label>{elements?.title||'title'}</Label>
             </DiagramHeaderWrapper>

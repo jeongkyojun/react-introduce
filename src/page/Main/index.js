@@ -20,7 +20,7 @@ const Main = ()=>{
                 <Image src={'/images/myPics.jpg'} alt={'myPics'} width={'10rem'} height={'10rem'} isCircle={true}></Image>
             </StyledImageWrapper>
             <StyledTextWrapper>
-                <DiagramClass num={3}></DiagramClass>
+                <DiagramClass num={3} maxwidth={100}></DiagramClass>
                 <StyledTextChild></StyledTextChild>
                 <StyledTextParent>
                     <Label>test</Label>

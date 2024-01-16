@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledDiagramBoard = styled.div`
+    opacity: ${({disabled})=>disabled?0:1};
     width: ${({width})=>width||'12rem'};
     height: ${({height})=>height||'14rem'};
     border : 1px solid white;

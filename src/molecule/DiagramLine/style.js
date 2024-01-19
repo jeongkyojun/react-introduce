@@ -16,7 +16,10 @@ export const StyledLinearHead = styled.div`
 `
 export const StyledLinearChild = styled.div`
     display: flex;
+<<<<<<< HEAD
     color: white;
+=======
+>>>>>>> 57c8f5c0198ea910fbabf2ad9b181acb349275ba
     flex-direction: row;
     justify-content: center;
     width: ${({setAnimation})=>setAnimation?'100%':'0rem'};;
@@ -25,7 +28,10 @@ export const StyledLinearChild = styled.div`
 `
 export const StyledLinearWrapper = styled.div`
     width: ${({childNum})=>(100/(childNum+1))||33}rem;
+<<<<<<< HEAD
     color: white;
+=======
+>>>>>>> 57c8f5c0198ea910fbabf2ad9b181acb349275ba
     ${({isTop,isSelected})=>
         isTop?
         css`
@@ -34,7 +40,11 @@ export const StyledLinearWrapper = styled.div`
         `:
             isSelected?
             css`
+<<<<<<< HEAD
                 border-bottom: ${({isEnd,isFirst})=> (isEnd||isFirst)?'none':'1px solid white'};
+=======
+                //border-bottom: ${({isEnd,isFirst})=> (isEnd||isFirst)?'none':'1px solid white'};
+>>>>>>> 57c8f5c0198ea910fbabf2ad9b181acb349275ba
                 border-right: ${({isFirst})=> isFirst?'1px solid white':'none'};
             `:
             css`

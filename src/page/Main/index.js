@@ -1,41 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { StyledImageWrapper, StyledMain, StyledTextChild, StyledTextParent, StyledTextWrapper } from "./style";
-import Image from "../../atom/Image";
-import Label from "../../atom/Label";
-import DiagramBoard from "../../organ/DiagramBoard";
-import DiagramLine from "../../molecule/DiagramLine";
-import DiagramClass from "../../organ/DiagramClass";
-<<<<<<< HEAD
-import { HeadData } from "../../data/DiagramData/data";
-=======
->>>>>>> 57c8f5c0198ea910fbabf2ad9b181acb349275ba
+import React from "react";
+import About from "../About";
+import Start from "../Start";
+import Project from "../Project";
+import Skills from "../Skills";
 
 const Main = ()=>{
-    const [showImageMenu, setShowImageMenu] = useState(false);
-    
-    useEffect(()=>{
-        setShowImageMenu(true);
-    })
-    
-
+    const DEFAULT_HEIGHT = '100vh';
     return(
-        <StyledMain>
-            <StyledImageWrapper isAnimation={showImageMenu} animationTime={2000}>
-                <Image src={'/images/myPics.jpg'} alt={'myPics'} width={'10rem'} height={'10rem'} isCircle={true}></Image>
-            </StyledImageWrapper>
-            <StyledTextWrapper>
-<<<<<<< HEAD
-                <DiagramClass num={3} maxwidth={100} data={HeadData}></DiagramClass>
-=======
-                <DiagramClass num={3} maxwidth={100}></DiagramClass>
->>>>>>> 57c8f5c0198ea910fbabf2ad9b181acb349275ba
-                <StyledTextChild></StyledTextChild>
-                <StyledTextParent>
-                    <Label>test</Label>
-                </StyledTextParent>
-            </StyledTextWrapper>
-        </StyledMain>
-    );
+        <div>
+            <Start height={DEFAULT_HEIGHT}></Start>
+            <About height={DEFAULT_HEIGHT}></About>
+            <Skills height={DEFAULT_HEIGHT}></Skills>
+            <Project height={DEFAULT_HEIGHT}></Project>
+        </div>
+    )
 }
 
 export default Main;

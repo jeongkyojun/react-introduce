@@ -3,7 +3,7 @@ import { ImageWrapper, StyledImage } from "./style";
 
 const Image = ({width,height,src,alt,isCircle,clickHandler,isAnimation,})=>{
     return(
-        <ImageWrapper width={width} height={height} onClick={clickHandler}>
+        <ImageWrapper width={width} height={height} onClick={clickHandler} id={alt||'image'}>
             <StyledImage src={src||'../logo192.png'} alt={alt} isCircle={isCircle} />
         </ImageWrapper>
     );

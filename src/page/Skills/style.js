@@ -11,12 +11,16 @@ export const StyledSkillPage = styled.div`
 
 export const StyledSkillWrapper = styled.div`
     display: flex;
+    position: relative;
+    left:${({isExplain})=>isExplain?'0%': '20%'};
+    z-index: 1;
     flex-direction: column;
     align-items: center;
     width: 40rem;
     height: 48rem;
     border-radius: 5rem;
     background-color: #ffffff;
+    transition: all 1000ms;
 `
 
 export const SkillWrapperHeader = styled.div`
@@ -41,6 +45,8 @@ export const SkillWrapperBodyImages = styled.div`
 
 export const StyledExplainWrapper = styled.div`
     display: flex;
+    position: relative;
+    left:${({isExplain})=>isExplain?'0%': '-20%'};
     flex-direction: column;
     align-items: center;
     width: 40rem;
@@ -48,7 +54,6 @@ export const StyledExplainWrapper = styled.div`
     border-radius: 5rem;
     background-color: #ffffff;
     opacity: ${({isExplain})=>isExplain?1:0};
-
-    transition: opacity 1000ms;
+    transition: all 1000ms;
 `
 

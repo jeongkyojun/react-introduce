@@ -2,33 +2,37 @@ import React, { useState } from "react";
 import { SkillWrapperBody, SkillWrapperBodyImages, SkillWrapperHeader, StyledExplainWrapper, StyledSkillPage, StyledSkillWrapper } from "./style";
 import Image from "../../atom/Image";
 import Label from "../../atom/Label";
+import { ExplainData } from "../../data/AboutData/data";
 
 const Skills = ({...rest})=>{
     const [clickState, setClickState] = useState(false);
+    const [selected,setSelected] = useState('none');
 
-    const clickIconHandler = ()=>{
-        console.log("click");
-        setClickState((prev)=>{
-            return(!prev);
-        });
+    const clickIconHandler = (e)=>{
+        if(!clickState || selected===e.currentTarget.id){
+            setClickState((prev)=>{
+                return(!prev);
+            });
+        }
+        setSelected(e.currentTarget.id);
     }
 
     return (
         <StyledSkillPage {...rest}>
-            <StyledSkillWrapper>
+            <StyledSkillWrapper isExplain={clickState}>
                 <SkillWrapperHeader> 
                     <Label color={'black'} fontSize={'4rem'} fontWeight={800}>
                         Skills
                     </Label>
                 </SkillWrapperHeader>
-                <SkillWrapperBody onClick={clickIconHandler}>
+                <SkillWrapperBody>
                     <Label color={'black'} fontSize={'2rem'} fontWeight={800}> Front-end</Label>
                     <SkillWrapperBodyImages>
-                        <Image alt={'html'} width={'6rem'} height={'6rem'}></Image>
-                        <Image alt={'css'} width={'6rem'} height={'6rem'}></Image>
-                        <Image alt={'javaScript'} width={'6rem'} height={'6rem'}></Image>
+                        <Image src={'../images/html.png'} alt={'html'} width={'6rem'} height={'6rem'} clickHandler={clickIconHandler}></Image>
+                        <Image src={'../images/css.png'} alt={'css'} width={'6rem'} height={'6rem'} clickHandler={clickIconHandler}></Image>
+                        <Image src={'../images/js.png'} alt={'javaScript'} width={'6rem'} height={'6rem'} clickHandler={clickIconHandler}></Image>
+                        <Image src={'../images/vue.png'} alt={'vue'} width={'6rem'} height={'6rem'} clickHandler={clickIconHandler}></Image>
                         <Image alt={'react'} width={'6rem'} height={'6rem'}></Image>
-                        <Image alt={'vue'} width={'6rem'} height={'6rem'}></Image>
                     </SkillWrapperBodyImages>
                     <Label color={'black'} fontSize={'2rem'} fontWeight={800}> Back-end</Label>
                     <SkillWrapperBodyImages>
@@ -43,7 +47,8 @@ const Skills = ({...rest})=>{
                 </SkillWrapperBody>
             </StyledSkillWrapper>
             <StyledExplainWrapper isExplain={clickState}>
-                
+                <Label color={'black'} fontSize={'2rem'}> selected </Label>
+                <Label color={'black'} fontSize={'2rem'}>{ExplainData[selected]}</Label>
             </StyledExplainWrapper>
         </StyledSkillPage>
     )

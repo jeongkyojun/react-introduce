@@ -19,6 +19,6 @@ export const LabelWrapper = styled.div`
 
 export const AnimationWrapper = styled.div`
     opacity: ${({keyWord})=>keyWord?1:0};
-    padding-right: ${({keyWord})=>keyWord?'':''};
-    transition: opacity ${({opacityTime})=>opacityTime||1000}ms;
+    margin-left: ${({keyWord})=>keyWord?'none':'-10rem'};
+    transition: all ${({opacityTime})=>opacityTime||1000}ms;
 `

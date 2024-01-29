@@ -11,12 +11,13 @@ export const ImageWrapper = styled.div`
 `;
 
 export const StyledImage = styled.img`
-    ${({ isCircle }) =>
+    ${({ isCircle,borderRadius }) =>
         isCircle &&
         css`
         object-fit: cover;
-        border-radius: 50%;
+        border-radius: ${borderRadius||'50%'};
         `}
     width: 100%;
     height: 100%;
+    border: ${({border})=>border||'none'};
 `;

@@ -10,8 +10,8 @@ const About = ({...rest})=>{
     return(
         <StyledAboutPage {...rest}>
             <Label color={'black'} fontSize={'5rem'} fontWeight={800}>About</Label>
+            <InfoCard img={'../images/myPics.jpg'} text={DEFAULT_TEXT} width={'60rem'} height={'20rem'} textColor={'black'} fontSize={'2rem'}></InfoCard>
             <AboutWrapper>
-                <InfoCard img={'../images/myPics.jpg'} text={DEFAULT_TEXT} width={'20rem'} height={'100%'} textColor={'black'} fontSize={'2rem'}></InfoCard>
                 <AboutLabelWrapper>
                     <AboutExplainWrapper>
                         <AboutCard textColor={'black'} fontSize={'2rem'} fontWeight={900} height={'5rem'} border={true}>한국해양대학교 it융합 전공 졸업</AboutCard>

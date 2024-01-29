@@ -23,7 +23,7 @@ export const AboutExplainWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50rem;
-    height: 50rem;
-    background-color: red;
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid red;
 `

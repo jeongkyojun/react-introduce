@@ -32,15 +32,16 @@ const Skills = ({...rest})=>{
                         <Image src={'../images/css.png'} alt={'css'} width={'6rem'} height={'6rem'} clickHandler={clickIconHandler}></Image>
                         <Image src={'../images/js.png'} alt={'javaScript'} width={'6rem'} height={'6rem'} clickHandler={clickIconHandler}></Image>
                         <Image src={'../images/vue.png'} alt={'vue'} width={'6rem'} height={'6rem'} clickHandler={clickIconHandler}></Image>
-                        <Image alt={'react'} width={'6rem'} height={'6rem'}></Image>
+                        <Image src={'../images/react.png'} alt={'react'} width={'6rem'} height={'6rem'}></Image>
                     </SkillWrapperBodyImages>
                     <Label color={'black'} fontSize={'2rem'} fontWeight={800}> Back-end</Label>
                     <SkillWrapperBodyImages>
-                        <Image alt={'java'} width={'6rem'} height={'6rem'}></Image>
+                        <Image src={'../images/java.png'} alt={'java'} width={'6rem'} height={'6rem'} clickHandler={clickIconHandler}></Image>
                         <Image alt={'spring'} width={'6rem'} height={'6rem'}></Image>
                     </SkillWrapperBodyImages>
                     <Label color={'black'} fontSize={'2rem'} fontWeight={800}> Etc</Label>
                     <SkillWrapperBodyImages>
+                        <Image src={'../images/github.png'} alt={'github'} width={'6rem'} height={'6rem'}></Image>
                         <Image alt={'docker'} width={'6rem'} height={'6rem'}></Image>
                         <Image alt={'jenkins'} width={'6rem'} height={'6rem'}></Image>
                     </SkillWrapperBodyImages>

@@ -7,3 +7,12 @@ export const StyledProjectPage = styled.div`
     width: 100%;
     height: ${({height})=>height||'59rem'};
 `
+
+export const StyledProjectWrapper = styled.div`
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid blue;
+`

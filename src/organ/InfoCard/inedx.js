@@ -6,9 +6,9 @@ import MyInfo from "../../molecule/MyInfo";
 
 const InfoCard = ({img, text,...rest})=>{
     return(
-        <AboutCard {...rest}>
-            <MyInfo img={img} list={text} width={rest.width} height={rest.width}></MyInfo>
-        </AboutCard>
+        <StyledInfoCard {...rest}>
+            <MyInfo img={img} list={text} width={'15rem'} height={'15rem'}></MyInfo>
+        </StyledInfoCard>
     )
 }
 

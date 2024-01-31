@@ -41,7 +41,7 @@ const Skills = ({...rest})=>{
                     </SkillWrapperBodyImages>
                     <Label color={'black'} fontSize={'2rem'} fontWeight={800}> Etc</Label>
                     <SkillWrapperBodyImages>
-                        <Image src={'../images/github.png'} alt={'github'} width={'6rem'} height={'6rem'}></Image>
+                        <Image src={'../images/github_skill.png'} alt={'github'} width={'6rem'} height={'6rem'}></Image>
                         <Image alt={'docker'} width={'6rem'} height={'6rem'}></Image>
                         <Image alt={'jenkins'} width={'6rem'} height={'6rem'}></Image>
                     </SkillWrapperBodyImages>

@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectExplain, ProjectExplainWrapper, ProjectImageWrapper, ProjectTags, StyledProjectCard, TagDiv } from "./style";
+import { ProjectExplain, ProjectExplainWrapper, ProjectImageWrapper, ProjectLink, ProjectTags, ProjectTime, StyledProjectCard, TagDiv } from "./style";
 import Label from "../../atom/Label";
 import Image from "../../atom/Image";
 
@@ -20,6 +20,9 @@ const ProjectCard = ({data, src, alt, link, linkImg, ...rest})=>{
                 <ProjectExplain>
                     {explain}
                 </ProjectExplain>
+                <ProjectTime>
+                    프로젝트 기간 : {time}
+                </ProjectTime>
                 <ProjectTags>
                     {
                         tags.map((tag)=> {
@@ -29,7 +32,9 @@ const ProjectCard = ({data, src, alt, link, linkImg, ...rest})=>{
                         })
                     }
                 </ProjectTags>
-                <Image src={linkImg} alt={'link'} height={'3rem'} width={'3rem'} clickHandler={clickHandler}></Image>
+                <ProjectLink>
+                    <Image src={linkImg} alt={'link'} height={'2rem'} width={'2rem'} clickHandler={clickHandler}></Image>
+                </ProjectLink>
             </ProjectExplainWrapper>
         </StyledProjectCard>
     );

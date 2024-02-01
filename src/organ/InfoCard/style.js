@@ -4,5 +4,5 @@ export const StyledInfoCard = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 30rem;
+    height: 20rem;
 `

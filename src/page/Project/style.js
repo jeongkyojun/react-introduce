@@ -6,11 +6,12 @@ export const StyledProjectPage = styled.div`
     align-items: center;
     width: 100%;
     height: ${({height})=>height||'59rem'};
+    background-color: #ffffff;
 `
 
 export const StyledProjectWrapper = styled.div`
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     margin-top: 2rem;
     padding-top: 1rem;

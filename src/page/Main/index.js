@@ -10,14 +10,15 @@ import { StyledMain } from "./style";
 
 const Main = ()=>{
     const DEFAULT_HEIGHT = '1080px';
+    const SUB_HEIGHT = '540px';
     return(
         <StyledMain>
             <Start height={DEFAULT_HEIGHT}></Start>
-            <AboutSub height={DEFAULT_HEIGHT}></AboutSub>
+            <AboutSub height={SUB_HEIGHT}></AboutSub>
             <About height={DEFAULT_HEIGHT}></About>
-            <SkillSub height={DEFAULT_HEIGHT}></SkillSub>
+            <SkillSub height={SUB_HEIGHT}></SkillSub>
             <Skills height={DEFAULT_HEIGHT}></Skills>
-            <ProjectSub height={DEFAULT_HEIGHT}></ProjectSub>
+            <ProjectSub height={SUB_HEIGHT}></ProjectSub>
             <Project height={DEFAULT_HEIGHT}></Project>
         </StyledMain>
     )

@@ -12,6 +12,8 @@ export const StyledAboutPage = styled.div`
 export const AboutWrapper = styled.div`
     display: flex;
     flex-direction: row;
+    width: 70rem;
+    justify-content: space-between;
 `
 
 export const AboutLabelWrapper = styled.div`

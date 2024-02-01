@@ -8,7 +8,7 @@ export const StyledAboutCard = styled.div`
     border-radius: 3rem;
     background-color: ${({backgroundColor})=>backgroundColor||'none'};
     width: ${({width})=>width||'20rem'};
-    height: ${({height})=>height||'5rem'};
+    height: ${({height})=>height||'20rem'};
     border: 1px solid black;
     margin-top: 1rem;
 `
